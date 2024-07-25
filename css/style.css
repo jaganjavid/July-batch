@@ -1,0 +1,44 @@
+
+
+h3{
+    color: orangered;
+}
+
+
+h1{
+    color: green;
+}
+
+#id{
+    color: #0E54B2;
+}
+
+.class{
+    color: rgba(0, 0, 255, 1);
+}
+
+.box{
+    border: 5px solid blue;
+
+    /* Inner spacing */
+
+    padding: 50px;
+
+    /* padding-top: 50px;
+    padding-right: 100px;
+    padding-bottom: 150px;
+    padding-left: 200px; */
+
+    /* Two parameters 1st => TOP & BOTTOM , 2nd => LEFT AND RIGHT*/
+
+    /* padding: 100px 200px; */
+
+    /* Four Parameters 1st => Top, 2nd => right, 3rd => Bottom, 4th => left*/
+
+    /* padding: 50px 100px 150px 200px; */
+
+
+    /* Outer Spacing */
+    margin: 50px;
+
+}
