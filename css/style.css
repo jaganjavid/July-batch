@@ -1,4 +1,7 @@
 
+*{
+ box-sizing: border-box;
+}
 
 h3{
     color: orangered;
@@ -41,4 +44,85 @@ h1{
     /* Outer Spacing */
     margin: 50px;
 
+
+
 }
+
+
+.box-2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    padding: 50px;
+}
+
+
+.box-3{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    padding: 50px;
+    border: 5px solid green;
+    /* box-sizing: border-box; */
+}
+
+
+.box-parent{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    /* position: static; */
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.box-child{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    right: 0px;
+}
+
+
+button{
+    height: 50px;
+    width: 150px;
+    background-color: blue;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s;
+}
+
+button:hover{
+    height: 60px;
+    width: 170px;
+    font-size: 20px;
+    background-color: orangered;
+}
+
+/* ul li:first-child{
+    color: green;
+}
+
+ul li:nth-child(2){
+    color: rgb(245, 47, 255);
+}
+
+ul li:last-child{
+    color: blue;
+} */
+
+ul li:nth-child(odd){
+    color: blue;
+}
+
+ul li:nth-child(even){
+    color: red;
+}
+
+
+/* Flex */
