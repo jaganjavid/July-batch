@@ -75,7 +75,7 @@ header{
 }
 
 .banner-wrapper h1{
-    font-size: 48px;
+    font-size: 35px;
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -183,4 +183,68 @@ footer{
     background-color: #D6D6D6;
     color: #4254F4;
     text-align: center;
+}
+
+
+/* Responsive start */
+
+@media only screen and (min-width: 1100px) {
+
+    .banner-wrapper h1{
+        font-size: 48px;
+    }
+
+    .banner-wrapper h1 span {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 1000px){
+
+    .jobs-wrapper{
+        flex-direction: column;
+    }
+
+    .jobs-wrapper > div{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .banner-wrapper{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-wrapper > div {
+        width: 100%;
+    }
+
+    .banner-wrapper > div:first-child > div {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    /* .header-wrapper{
+        display: block;
+        text-align: center;
+    }
+
+    .header-wrapper nav{
+        justify-content: center;
+        margin-top: 20px;
+    } */
+
+    .header-wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+
 }
