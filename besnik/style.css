@@ -1,0 +1,147 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container{
+    max-width: 1114px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+main{
+    background: url("./image/banner/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header Start */
+
+header{
+    padding: 20px 0px;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-wrapper nav{
+    display: flex;
+    gap: 35px;
+}
+
+.header-wrapper nav a{
+    color: #ffffff;
+}
+
+.nav-btn{
+    color: #ffffff;
+    background-color: rgba(255, 250, 249, 0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* Banner */
+
+.banner{
+    padding: 100px 0px;
+    color: #ffffff;
+}
+
+.banner-wrapper{
+    text-align: center;
+}
+
+.banner-wrapper h1{
+    font-size: 50px;
+}
+
+.banner-wrapper p{
+    margin: 30px 0px;
+}
+
+.primary-btn{
+    padding: 20px 40px;
+    background-color: #231A36;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+/* Cients Start*/
+.clients{
+    padding: 50px 0px;
+}
+
+.clients h5{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.clients-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.clients-wrapper > div{
+    text-align: center;
+}
+
+
+/* Responsive */
+
+/* MIN - WIDTH */
+
+@media only screen and (min-width: 998px) {
+
+    .banner-wrapper h1{
+        font-size: 94px;
+    }
+
+   .text-break{
+     display: block;
+   }
+}
+
+
+/* MAX - WIDTH */
+
+@media only screen and (max-width: 998px) {
+
+    .clients-wrapper > div{
+      width: 30%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .header-wrapper nav{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .clients-wrapper > div{
+        width: 50%;
+    }
+    
+}
