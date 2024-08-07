@@ -15,6 +15,13 @@ a{
     display: inline-block;
 }
 
+h2{
+    font-size: 40px;
+    color: #231A36;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 .container{
     max-width: 1114px;
     margin: 0px auto;
@@ -106,6 +113,68 @@ header{
 }
 
 
+/* Solutions Start */
+
+.solutions{
+    padding: 100px 0px;
+}
+
+.sec-heading{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.solutions-wrapper{
+    max-width: 850px;
+    margin: 0px auto;
+}
+
+.solutions-wrapper > div{
+     display: flex;
+     align-items: center;
+}
+
+.solutions-wrapper > div > div{
+    width: 50%;
+}
+
+.solutions-wrapper > div > div:last-child{
+    text-align: right;
+}
+
+.solutions-wrapper > div > div > span{
+    text-transform:uppercase;
+    color: #B33CDB;
+}
+
+.solutions-wrapper h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 5px 0px 15px 0px;
+    color: #1F1F26;
+}
+
+.solutions-wrapper p{
+    color: #426666;
+    margin-bottom: 15px;
+}
+
+.solutions-wrapper a{
+    display: flex;
+    gap: 10px;
+    color: #42424A;
+    align-items: center;
+}
+
+
+.solutions-wrapper > div:nth-child(2) > div:first-child{
+   order: 2;
+}
+
+.solutions-wrapper > div:nth-child(2) > div:last-child{
+   order: 1;
+   text-align: left;
+}
 /* Responsive */
 
 /* MIN - WIDTH */
@@ -133,9 +202,50 @@ header{
 }
 
 @media only screen and (max-width: 768px) {
+
     .header-wrapper nav{
         display: none;
     }
+
+    .solutions-wrapper > div{
+        flex-direction: column;
+    }
+    
+    .solutions-wrapper > div > div{
+        width: 100%;
+        text-align: center;
+    }
+
+    .solutions-wrapper a{
+        justify-content: center;
+    }
+
+    .solutions-wrapper > div > div:first-child {
+        margin-bottom: 50px;
+    }
+
+    .solutions-wrapper > div > div:last-child,
+    .solutions-wrapper > div:nth-child(2) > div:last-child{
+        text-align: center;
+    }
+
+
+    .solutions-wrapper > div:nth-child(2) > div:first-child{
+        order: 1;
+    }
+    
+    .solutions-wrapper > div:nth-child(2) > div:last-child{
+        order: 2;
+    }
+
+    .solutions-wrapper > div:not(:last-child){
+        margin-bottom: 60px;
+    }
+
+    /* .solutions-wrapper > div:last-child{
+        margin: 0px;
+    } */
+
 }
 
 @media only screen and (max-width: 576px) {
