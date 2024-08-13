@@ -175,6 +175,96 @@ header{
    order: 1;
    text-align: left;
 }
+
+
+/* Social Start*/
+
+.social{
+    background-color: #231A36;
+    color: #ffffff;
+    padding: 100px 0px;
+}
+
+.social h2{
+    color: #ffffff;
+}
+
+.social-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-wrapper > div{
+    text-align: center;
+}
+
+.social-wrapper > div h3{
+    font-size: 40px;
+}
+
+/* Need start */
+
+.need{
+    padding: 100px 0px 200px 0px;
+}
+
+.need-wrapper{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 25px;
+}
+
+.need-wrapper > div{
+    flex-grow: 1;
+    /* width: 30%; */
+    position: relative;
+}
+
+.need-wrapper > div img{
+    width: 100%;
+}
+
+.need-wrapper > div > div{
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    position: absolute;
+    width: 85%;
+    bottom: -94px;
+    left: 0px;
+}
+
+.need-wrapper h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.need-wrapper h4{
+    font-size: 24px;
+}
+
+.need-wrapper > div > div > div{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.need-wrapper > div > div > div span{
+    font-size: 10px;
+}
+
+.need-wrapper > div > div a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.need-wrapper > div > div a img{
+    width: 15px;
+    height: 15px;
+}
+
 /* Responsive */
 
 /* MIN - WIDTH */
@@ -197,6 +287,10 @@ header{
 
     .clients-wrapper > div{
       width: 30%;
+    }
+
+    .need-wrapper h4{
+        font-size: 18px;
     }
 
 }
@@ -246,12 +340,53 @@ header{
         margin: 0px;
     } */
 
+    .social-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .social-wrapper > div{
+        width: 50%;
+    }
+
+    /* .social-wrapper > div{
+        margin-bottom: 50px;
+    } */
+
+    .social-wrapper > div:nth-child(1),
+    .social-wrapper > div:nth-child(2){
+        margin-bottom: 50px;
+    }
+
+
+    .need {
+        padding: 100px 0px 100px 0px;
+    }
+    
+    .need-wrapper{
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .need-wrapper > div > div{
+        bottom: 5px;
+    }
+
+    
+
 }
 
 @media only screen and (max-width: 576px) {
 
     .clients-wrapper > div{
         width: 50%;
+    }
+
+    .social-wrapper > div{
+        width: 100%;
+    }
+
+    .social-wrapper > div:nth-child(3){
+        margin-bottom: 50px;
     }
     
 }
