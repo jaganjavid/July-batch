@@ -265,6 +265,104 @@ header{
     height: 15px;
 }
 
+/* testimonial start */
+.testimonial{
+    padding: 100px 0px;
+}
+
+.testimonial-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-wrapper>div{
+    width: 50%;
+}
+
+.testimonial-wrapper p{
+    font-size: 22px;
+    font-style: italic;
+    color: #6D6D6D;
+    line-height: 36px;
+    margin: 15px 0px 25px 0px;
+}
+
+.testimonial-wrapper h4{
+    font-size: 25px;
+}
+
+.testimonial-wrapper span{
+    color: #9C988F;
+    font-weight: 400;
+}
+
+.testimonial-wrapper>div:last-child{
+    text-align: center;
+}
+
+.testimonial-wrapper>div:last-child img{
+    width: 60%;
+}
+
+/* newsletter */
+
+.newsletter{
+    text-align: center;
+    padding: 100px 0px;
+    color: #ffffff;
+}
+
+.newsletter h2{
+    color: #ffffff;
+}
+
+.newsletter-wrapper{
+    max-width: 975px;
+    margin: 0px auto;
+    background-color: blue;
+    padding: 50px;
+    background: url("./image/newsletter/bg.png") no-repeat center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.newsletter a{
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Footer Start */
+
+footer img{
+    filter: invert(1);
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.footer-wrapper nav{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-wrapper nav a{
+    color: #333333;
+}
+
+footer p{
+    text-align: center;
+    margin-top: 30px;
+    color: #959595;
+    font-size: 11px;
+}
+
+
 /* Responsive */
 
 /* MIN - WIDTH */
@@ -371,6 +469,19 @@ header{
         bottom: 5px;
     }
 
+    .testimonial-wrapper{
+        flex-direction: column;
+    }
+
+    .testimonial-wrapper>div{
+        width: 100%;
+        text-align: center;
+    }
+
+    .testimonial-wrapper>div:last-child{
+        margin-top: 80px;
+    }
+
     
 
 }
@@ -389,4 +500,13 @@ header{
         margin-bottom: 50px;
     }
     
+    .footer-wrapper{
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .footer-wrapper img{
+        width: 150px;
+    }
 }
