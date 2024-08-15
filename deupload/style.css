@@ -1,0 +1,46 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* Banner start */
+.banner{
+    background-color: #EBE5FA;
+}
+
+.banner-wrapper{
+    padding: 100px 0px;
+}
+
+/* Hero Image */
+.hero-image{
+    padding: 100px 0px;
+}
+
+/* Lightning Start */
+.lightning{
+    padding: 100px 0px;
+}
+
+.lightning-wrapper > div > div > div{
+    background-color: #651FFF;
+    padding: 50px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.lightning-wrapper > div > div > div a{
+    color: #ffffff;
+}
