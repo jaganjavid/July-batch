@@ -13,6 +13,39 @@ a{
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+}
+
+h6{
+    font-size: 48px;
+}
+
+/* Reuse Class */
+
+.text-color-primary{
+    color: #651FFF;
+}
+
+.my-btn-primary{
+    background-color: #651FFF;
+    border: 2px solid #651FFF;
+    padding: 15px 40px;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+.my-btn-outline{
+    color: #333333;
+    padding: 15px 40px;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+.small-font{
+    font-size: 14px;
+}
 
 
 /* Banner start */
@@ -44,3 +77,70 @@ a{
 .lightning-wrapper > div > div > div a{
     color: #ffffff;
 }
+
+
+/* productivity Start */
+
+.productivity{
+    padding: 100px 0px;
+}
+
+.productivity h2 > span:nth-child(2) > span,
+.productivity h2 > span:nth-child(3){
+    color:#651FFF;
+}
+
+.productivity h2 > span:nth-child(3) > span{
+    color: #0B0D0E;
+}
+
+.productivity-wrapper>div>div>div{
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.productivity-wrapper>div>div>div h3{
+    color: #651FFF;
+}
+
+.productivity-wrapper>div>div:nth-child(1) > div{
+    background-color: #FFF7ED;
+}
+
+.productivity-wrapper>div>div:nth-child(2) > div{
+    background-color: #E0F7FA;
+}
+
+.productivity-team{
+    background-color: #ECECFE;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+
+/* decentralized Start */
+
+.decentralized{
+    padding: 100px 0px;
+}
+
+.decentralized-wrapper h2{
+    font-size: 42px;
+    line-height: 60px;
+}
+
+.decentralized-wrapper > div > div:nth-child(2) > div{
+    padding: 17px 15px;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .my-btn-primary,
+    .my-btn-outline{
+        padding: 15px 20px;
+        font-size: 10px;
+    }
+}
+
