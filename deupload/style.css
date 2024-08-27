@@ -11,6 +11,7 @@ body{
 
 a{
     text-decoration: none;
+    display: inline-block;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -19,6 +20,11 @@ h1, h2, h3, h4, h5, h6{
 
 h6{
     font-size: 48px;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
 }
 
 /* Reuse Class */
@@ -47,6 +53,12 @@ h6{
     font-size: 14px;
 }
 
+.my-blue-text-color{
+    color: #651FFF;
+}
+.my-green-text-color{
+    color: #22D3EE;
+}
 
 /* Banner start */
 .banner{
@@ -135,6 +147,71 @@ h6{
     border-radius: 20px;
 }
 
+/* pricing */
+
+.pricing{
+    padding: 100px 0px;
+    background: url("./image/pricing/bg.svg") no-repeat center;
+    background-size: cover;
+}
+
+.pricing h2{
+    font-size: 64px;
+    color: #ffffff;
+}
+.pricing .sec-heading p{
+    color: #ffffff;
+}
+
+
+.pricing-wrapper > div > div:nth-child(1) > div{
+    background-color: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    padding: 50px;
+}
+
+.pricing-wrapper > div > div:nth-child(2) > div{
+    padding: 50px;
+    background-color: #651FFF;
+    color: #ffffff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.pricing-wrapper > div > div:nth-child(2) > div > div > span{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 20px 0px;
+}
+
+
+.pricing-wrapper ul{
+    display: inline-block;
+}
+
+.pricing-wrapper ul li{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 998px) {
+    .pricing-wrapper{
+        position: relative;
+        top: 120px;
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    .pricing-wrapper > div > div:nth-child(2) > div{
+       border-radius: 20px;
+       margin-top: 25px;
+    }
+}
 
 @media only screen and (max-width: 576px) {
     .my-btn-primary,
@@ -144,3 +221,20 @@ h6{
     }
 }
 
+
+
+/* .test{
+    background-color: #651FFF;
+    color: white;
+    display: inline-block;
+    margin-top: 50px;
+    rotate: 0deg;
+    transform: scale(1);
+    transition: all 1s;
+    padding: 50px;
+}
+
+.test:hover{
+    rotate: 360deg;
+    transform: scale(2);
+} */
