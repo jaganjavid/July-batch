@@ -198,6 +198,21 @@ ul{
     margin-bottom: 20px;
 }
 
+/* works */
+.works{
+    padding: 100px 0px;
+}
+
+.work-box{
+    position: relative;
+}
+
+.work-box>img:nth-of-type(2){
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    width: 60%;
+}
 
 @media only screen and (min-width: 998px) {
     .pricing-wrapper{
@@ -210,6 +225,18 @@ ul{
     .pricing-wrapper > div > div:nth-child(2) > div{
        border-radius: 20px;
        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .work-box{
+        margin-bottom: 400px;
+    }
+
+    .work-box>img:nth-of-type(2){
+        left: 20%;
+        top: 400px;
+        rotate: 90deg;
     }
 }
 
