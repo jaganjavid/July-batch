@@ -68,7 +68,18 @@ function addTask(e) {
 }
 
 function removeTask(e){
-    console.log(e.target);
+    
+    // if(e.target.parentElement.className === "delete-item secondary-content"){
+    //    if(confirm("Are you sure?")){
+    //       e.target.parentElement.parentElement.remove();
+    //    }
+    // }
+
+    if(e.target.parentElement.classList.contains("delete-item")){
+        if(confirm("Are you sure?")){
+            e.target.parentElement.parentElement.remove();
+        }
+    }
 }
 
 function clearTask(){
