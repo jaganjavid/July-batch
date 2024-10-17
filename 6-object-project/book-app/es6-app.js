@@ -1,16 +1,18 @@
 
 
-// Book Constructor
+class Book{
 
-function Book(title, author, isbn) {
-    this.title = title;
-    this.author = author;
-    this.isbn = isbn;
+    constructor(title, author, isbn){
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+
 }
 
+class UI{
 
-function UI() {
-    UI.prototype.addBookToList = function (book) {
+    addBookToList(book){
 
         const list = document.querySelector("#book-list");
 
@@ -36,26 +38,25 @@ function UI() {
 
       list.appendChild(row);
 
-    },
-    UI.prototype.deleteBook = function(target){
-      
+    }
+
+    deleteBook(target){
         if(confirm("Are you sure?")){
             if(target.className === "delete"){
                 target.parentElement.remove();
             }
         }
+    }
 
-    },
-    UI.prototype.clearFields = function(){
-        // document.querySelector("#title").value = "";
+    clearFields(){
+         // document.querySelector("#title").value = "";
         // document.querySelector("#author").value = "";
         // document.querySelector("#isbn").value = "";
 
         document.querySelector("#book-form").reset();
     }
+
 }
-
-
 
 // Event listen to form submit
 
