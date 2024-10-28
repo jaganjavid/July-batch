@@ -10,6 +10,7 @@ class Book{
 
 }
 
+
 class UI{
 
     addBookToList(book){
@@ -58,6 +59,74 @@ class UI{
 
 }
 
+class Storage{
+
+
+    getBooks(){
+        let books;
+
+        if(localStorage.getItem("books") === null){
+            books = [];
+        } else {
+            books = JSON.parse(localStorage.getItem("books"));
+        }
+
+        return books;
+    }
+
+    addBooks(book){
+        
+        const books = this.getBooks();
+
+        console.log(books);
+
+        books.push(book);
+
+        localStorage.setItem("books", JSON.stringify(books));
+
+    }
+
+    displayBook(){
+        const books = this.getBooks();
+
+        books.forEach(function(book){
+           const ui = new UI();
+
+           ui.addBookToList(book);
+
+        })
+
+    }
+
+
+    deleteBook(isbn){
+        
+        const books = this.getBooks();
+
+        books.forEach(function(book, index){
+
+            if(book.isbn === isbn){
+                books.splice(index, 1);
+            }
+
+        });
+
+        localStorage.setItem("books", JSON.stringify(books));
+
+
+    }
+    
+    clearBooks(){
+        localStorage.removeItem("books");
+    }
+
+}
+
+
+const storage = new Storage();
+
+document.addEventListener("DOMContentLoaded", storage.displayBook())
+
 // Event listen to form submit
 
 document.querySelector("#book-form").addEventListener("submit", function (e) {
@@ -70,11 +139,13 @@ document.querySelector("#book-form").addEventListener("submit", function (e) {
     // Create a object instance
     const book = new Book(title, author, isbn);
     const ui = new UI();
+    const storage = new Storage();
 
     if (title === "" || author === "" || isbn === "") {
         alert("Please fill the form");
     } else {
         ui.addBookToList(book);
+        storage.addBooks(book);
         ui.clearFields();
     }
 
@@ -89,8 +160,16 @@ document.querySelector("#book-list").addEventListener("click", function(e){
         // Instantiate UI
 
         const ui = new UI();
+        const storage = new Storage();
+
+        const isbn = e.target.parentElement.previousElementSibling.innerText;
+        
 
         ui.deleteBook(e.target.parentElement);
+
+        storage.deleteBook(isbn);
+
+        
 
 
     }
@@ -100,5 +179,7 @@ document.querySelector("#book-list").addEventListener("click", function(e){
 // Clear event listner
 
 document.querySelector("#clear-btn").addEventListener("click", function(e){
+    const storage = new Storage();
+    storage.clearBooks();
     document.querySelector("#book-list").innerHTML = "";
 })
